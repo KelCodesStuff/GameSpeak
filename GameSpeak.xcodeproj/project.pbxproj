@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04515F63DB169DB158498F5C /* Pods_GameSpeak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E668D5F7C6F66F4F24DC050C /* Pods_GameSpeak.framework */; };
+		0C8AB39121F835A200352B82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8AB39021F835A200352B82 /* AppDelegate.swift */; };
+		0C8AB39621F835A200352B82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8AB39421F835A200352B82 /* Main.storyboard */; };
+		0C8AB39821F835A300352B82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C8AB39721F835A300352B82 /* Assets.xcassets */; };
+		0C8AB39B21F835A300352B82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8AB39921F835A300352B82 /* LaunchScreen.storyboard */; };
+		0C8AB3A621F835A300352B82 /* GameSpeakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8AB3A521F835A300352B82 /* GameSpeakTests.swift */; };
+		0C8AB3B121F835A300352B82 /* GameSpeakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8AB3B021F835A300352B82 /* GameSpeakUITests.swift */; };
+		0C8AB3C021F8361B00352B82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8AB3BF21F8361A00352B82 /* ViewController.swift */; };
+		0C8AB3C421F8366700352B82 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8AB3C321F8366700352B82 /* LoginController.swift */; };
+		0C8AB3C821FCD07000352B82 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C8AB3C721FCD07000352B82 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0C8AB3A221F835A300352B82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C8AB38521F835A200352B82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C8AB38C21F835A200352B82;
+			remoteInfo = GameSpeak;
+		};
+		0C8AB3AD21F835A300352B82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C8AB38521F835A200352B82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C8AB38C21F835A200352B82;
+			remoteInfo = GameSpeak;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C8AB38D21F835A200352B82 /* GameSpeak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameSpeak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C8AB39021F835A200352B82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0C8AB39521F835A200352B82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0C8AB39721F835A300352B82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C8AB39A21F835A300352B82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0C8AB39C21F835A300352B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C8AB3A121F835A300352B82 /* GameSpeakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameSpeakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C8AB3A521F835A300352B82 /* GameSpeakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSpeakTests.swift; sourceTree = "<group>"; };
+		0C8AB3A721F835A300352B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C8AB3AC21F835A300352B82 /* GameSpeakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameSpeakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C8AB3B021F835A300352B82 /* GameSpeakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSpeakUITests.swift; sourceTree = "<group>"; };
+		0C8AB3B221F835A300352B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C8AB3BF21F8361A00352B82 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C8AB3C321F8366700352B82 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		0C8AB3C721FCD07000352B82 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B84849A806727A9B6B309F7F /* Pods-GameSpeak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameSpeak.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameSpeak/Pods-GameSpeak.release.xcconfig"; sourceTree = "<group>"; };
+		DE0EFB42438E045C5B181355 /* Pods-GameSpeak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameSpeak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameSpeak/Pods-GameSpeak.debug.xcconfig"; sourceTree = "<group>"; };
+		E668D5F7C6F66F4F24DC050C /* Pods_GameSpeak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameSpeak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C8AB38A21F835A200352B82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04515F63DB169DB158498F5C /* Pods_GameSpeak.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C8AB39E21F835A300352B82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C8AB3A921F835A300352B82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C8AB38421F835A200352B82 = {
+			isa = PBXGroup;
+			children = (
+				0C8AB38F21F835A200352B82 /* GameSpeak */,
+				0C8AB3A421F835A300352B82 /* GameSpeakTests */,
+				0C8AB3AF21F835A300352B82 /* GameSpeakUITests */,
+				0C8AB38E21F835A200352B82 /* Products */,
+				3C32DB3F5BCEA4C4326CB2F3 /* Pods */,
+				C1AE81B355A5FB0C1FFE0D67 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0C8AB38E21F835A200352B82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C8AB38D21F835A200352B82 /* GameSpeak.app */,
+				0C8AB3A121F835A300352B82 /* GameSpeakTests.xctest */,
+				0C8AB3AC21F835A300352B82 /* GameSpeakUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C8AB38F21F835A200352B82 /* GameSpeak */ = {
+			isa = PBXGroup;
+			children = (
+				0C8AB3C121F8362600352B82 /* Model */,
+				0C8AB3C221F8362600352B82 /* View */,
+				0C8AB3BE21F8361A00352B82 /* Controller */,
+				0C8AB3C921FCD10900352B82 /* Supporting Files */,
+			);
+			path = GameSpeak;
+			sourceTree = "<group>";
+		};
+		0C8AB3A421F835A300352B82 /* GameSpeakTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C8AB3A521F835A300352B82 /* GameSpeakTests.swift */,
+				0C8AB3A721F835A300352B82 /* Info.plist */,
+			);
+			path = GameSpeakTests;
+			sourceTree = "<group>";
+		};
+		0C8AB3AF21F835A300352B82 /* GameSpeakUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0C8AB3B021F835A300352B82 /* GameSpeakUITests.swift */,
+				0C8AB3B221F835A300352B82 /* Info.plist */,
+			);
+			path = GameSpeakUITests;
+			sourceTree = "<group>";
+		};
+		0C8AB3BE21F8361A00352B82 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0C8AB39021F835A200352B82 /* AppDelegate.swift */,
+				0C8AB3BF21F8361A00352B82 /* ViewController.swift */,
+				0C8AB3C321F8366700352B82 /* LoginController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0C8AB3C121F8362600352B82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C8AB3C221F8362600352B82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C8AB3C921FCD10900352B82 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C8AB39421F835A200352B82 /* Main.storyboard */,
+				0C8AB39721F835A300352B82 /* Assets.xcassets */,
+				0C8AB39921F835A300352B82 /* LaunchScreen.storyboard */,
+				0C8AB39C21F835A300352B82 /* Info.plist */,
+				0C8AB3C721FCD07000352B82 /* GoogleService-Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3C32DB3F5BCEA4C4326CB2F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE0EFB42438E045C5B181355 /* Pods-GameSpeak.debug.xcconfig */,
+				B84849A806727A9B6B309F7F /* Pods-GameSpeak.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C1AE81B355A5FB0C1FFE0D67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E668D5F7C6F66F4F24DC050C /* Pods_GameSpeak.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C8AB38C21F835A200352B82 /* GameSpeak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C8AB3B521F835A300352B82 /* Build configuration list for PBXNativeTarget "GameSpeak" */;
+			buildPhases = (
+				E9AF702025696200EB3D865B /* [CP] Check Pods Manifest.lock */,
+				0C8AB38921F835A200352B82 /* Sources */,
+				0C8AB38A21F835A200352B82 /* Frameworks */,
+				0C8AB38B21F835A200352B82 /* Resources */,
+				7B74D41823A66A37AD565402 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GameSpeak;
+			productName = GameSpeak;
+			productReference = 0C8AB38D21F835A200352B82 /* GameSpeak.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0C8AB3A021F835A300352B82 /* GameSpeakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C8AB3B821F835A300352B82 /* Build configuration list for PBXNativeTarget "GameSpeakTests" */;
+			buildPhases = (
+				0C8AB39D21F835A300352B82 /* Sources */,
+				0C8AB39E21F835A300352B82 /* Frameworks */,
+				0C8AB39F21F835A300352B82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C8AB3A321F835A300352B82 /* PBXTargetDependency */,
+			);
+			name = GameSpeakTests;
+			productName = GameSpeakTests;
+			productReference = 0C8AB3A121F835A300352B82 /* GameSpeakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0C8AB3AB21F835A300352B82 /* GameSpeakUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C8AB3BB21F835A300352B82 /* Build configuration list for PBXNativeTarget "GameSpeakUITests" */;
+			buildPhases = (
+				0C8AB3A821F835A300352B82 /* Sources */,
+				0C8AB3A921F835A300352B82 /* Frameworks */,
+				0C8AB3AA21F835A300352B82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C8AB3AE21F835A300352B82 /* PBXTargetDependency */,
+			);
+			name = GameSpeakUITests;
+			productName = GameSpeakUITests;
+			productReference = 0C8AB3AC21F835A300352B82 /* GameSpeakUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C8AB38521F835A200352B82 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = KReid;
+				TargetAttributes = {
+					0C8AB38C21F835A200352B82 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					0C8AB3A021F835A300352B82 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 0C8AB38C21F835A200352B82;
+					};
+					0C8AB3AB21F835A300352B82 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 0C8AB38C21F835A200352B82;
+					};
+				};
+			};
+			buildConfigurationList = 0C8AB38821F835A200352B82 /* Build configuration list for PBXProject "GameSpeak" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0C8AB38421F835A200352B82;
+			productRefGroup = 0C8AB38E21F835A200352B82 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0C8AB38C21F835A200352B82 /* GameSpeak */,
+				0C8AB3A021F835A300352B82 /* GameSpeakTests */,
+				0C8AB3AB21F835A300352B82 /* GameSpeakUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0C8AB38B21F835A200352B82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C8AB39B21F835A300352B82 /* LaunchScreen.storyboard in Resources */,
+				0C8AB3C821FCD07000352B82 /* GoogleService-Info.plist in Resources */,
+				0C8AB39821F835A300352B82 /* Assets.xcassets in Resources */,
+				0C8AB39621F835A200352B82 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C8AB39F21F835A300352B82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C8AB3AA21F835A300352B82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B74D41823A66A37AD565402 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GameSpeak/Pods-GameSpeak-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameSpeak/Pods-GameSpeak-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9AF702025696200EB3D865B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameSpeak-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C8AB38921F835A200352B82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C8AB3C021F8361B00352B82 /* ViewController.swift in Sources */,
+				0C8AB3C421F8366700352B82 /* LoginController.swift in Sources */,
+				0C8AB39121F835A200352B82 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C8AB39D21F835A300352B82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C8AB3A621F835A300352B82 /* GameSpeakTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C8AB3A821F835A300352B82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C8AB3B121F835A300352B82 /* GameSpeakUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C8AB3A321F835A300352B82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C8AB38C21F835A200352B82 /* GameSpeak */;
+			targetProxy = 0C8AB3A221F835A300352B82 /* PBXContainerItemProxy */;
+		};
+		0C8AB3AE21F835A300352B82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C8AB38C21F835A200352B82 /* GameSpeak */;
+			targetProxy = 0C8AB3AD21F835A300352B82 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0C8AB39421F835A200352B82 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C8AB39521F835A200352B82 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0C8AB39921F835A300352B82 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C8AB39A21F835A300352B82 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0C8AB3B321F835A300352B82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0C8AB3B421F835A300352B82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0C8AB3B621F835A300352B82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE0EFB42438E045C5B181355 /* Pods-GameSpeak.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WC92Z884R6;
+				INFOPLIST_FILE = "$(SRCROOT)/GameSpeak/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kreid.GameSpeak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0C8AB3B721F835A300352B82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B84849A806727A9B6B309F7F /* Pods-GameSpeak.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WC92Z884R6;
+				INFOPLIST_FILE = "$(SRCROOT)/GameSpeak/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kreid.GameSpeak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0C8AB3B921F835A300352B82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WC92Z884R6;
+				INFOPLIST_FILE = GameSpeakTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kreid.GameSpeakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameSpeak.app/GameSpeak";
+			};
+			name = Debug;
+		};
+		0C8AB3BA21F835A300352B82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WC92Z884R6;
+				INFOPLIST_FILE = GameSpeakTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kreid.GameSpeakTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameSpeak.app/GameSpeak";
+			};
+			name = Release;
+		};
+		0C8AB3BC21F835A300352B82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WC92Z884R6;
+				INFOPLIST_FILE = GameSpeakUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kreid.GameSpeakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GameSpeak;
+			};
+			name = Debug;
+		};
+		0C8AB3BD21F835A300352B82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WC92Z884R6;
+				INFOPLIST_FILE = GameSpeakUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kreid.GameSpeakUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GameSpeak;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C8AB38821F835A200352B82 /* Build configuration list for PBXProject "GameSpeak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C8AB3B321F835A300352B82 /* Debug */,
+				0C8AB3B421F835A300352B82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C8AB3B521F835A300352B82 /* Build configuration list for PBXNativeTarget "GameSpeak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C8AB3B621F835A300352B82 /* Debug */,
+				0C8AB3B721F835A300352B82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C8AB3B821F835A300352B82 /* Build configuration list for PBXNativeTarget "GameSpeakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C8AB3B921F835A300352B82 /* Debug */,
+				0C8AB3BA21F835A300352B82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C8AB3BB21F835A300352B82 /* Build configuration list for PBXNativeTarget "GameSpeakUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C8AB3BC21F835A300352B82 /* Debug */,
+				0C8AB3BD21F835A300352B82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C8AB38521F835A200352B82 /* Project object */;
+}
