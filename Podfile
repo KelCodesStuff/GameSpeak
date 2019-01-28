@@ -15,3 +15,17 @@ pod 'Fabric'
 pod 'Crashlytics'
 
 end
+
+target 'GameSpeakTests' do
+    # Pods for testing
+
+pod 'Firebase/Core'
+
+end
+
+target 'GameSpeakUITests' do
+    # Pods for testing
+
+pod 'Firebase/Core'
+
+end
