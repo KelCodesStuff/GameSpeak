@@ -6,26 +6,24 @@ target 'GameSpeak' do
   use_frameworks!
 
   # Pods for GameSpeak
-
-pod 'Firebase/Core'
-pod 'Firebase/Database'
-pod 'Firebase/Auth'
-pod 'Firebase/Storage'
-pod 'Fabric'
-pod 'Crashlytics'
+	pod 'Firebase/Core'
+	pod 'Firebase/Database'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Storage'
+	pod 'Fabric'
+	pod 'Crashlytics'
+	pod 'PushNotifications'
 
 end
 
 target 'GameSpeakTests' do
     # Pods for testing
-
-pod 'Firebase/Core'
+    	pod 'Firebase/Core'
 
 end
 
 target 'GameSpeakUITests' do
     # Pods for testing
-
-pod 'Firebase/Core'
+    	pod 'Firebase/Core'
 
 end
