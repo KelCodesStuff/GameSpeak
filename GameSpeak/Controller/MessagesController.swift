@@ -39,30 +39,21 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 class MessagesController: UITableViewController {
     
-    var loginController: LoginController?
-    var messagesController: MessagesController?
-//    var settingsController: SettingsController?
-    
     let cellId = "cellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let settingsButton = UIImage(named: "settings_bar_icon")
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: settingsButton, style: .plain, target: self, action: #selector(handleSettings))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
         
-        let logoutButton = UIImage(named: "logout_icon")
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: logoutButton, style: .plain, target: self, action: #selector(handleLogout))
-        
-        let newMessageButton = UIImage(named: "chat_bar_icon")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: newMessageButton, style: .plain, target: self, action: #selector(handleNewMessage))
-        
+        let image = UIImage(named: "new_message_icon")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(handleNewMessage))
         
         checkIfUserIsLoggedIn()
         
         tableView.register(UserCell.self, forCellReuseIdentifier: cellId)
         
-//        self.navigationController?.isToolbarHidden = false
+        //        observeMessages()
     }
     
     var messages = [Message]()
@@ -201,14 +192,7 @@ class MessagesController: UITableViewController {
         loginController.messagesController = self
         present(loginController, animated: true, completion: nil)
     }
-/*
-    @objc func handleSettings() {
-        let settingsController = SettingsController()
-        settingsController.messagesController = self
-        let navController = UINavigationController(rootViewController: settingsController)
-        present(navController, animated: true, completion: nil)
-    }
-*/
+    
     @objc func handleNewMessage() {
         let newMessageController = NewMessageController()
         newMessageController.messagesController = self
