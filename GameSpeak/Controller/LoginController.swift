@@ -8,10 +8,42 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class LoginController: UIViewController {
     
+    var loginController: LoginController?
     var messagesController: MessagesController?
+    //    var settingsController: SettingsController?
+    
+    var inputsContainerViewHeightAnchor: NSLayoutConstraint?
+    var nameTextFieldHeightAnchor: NSLayoutConstraint?
+    var emailTextFieldHeightAnchor: NSLayoutConstraint?
+    var passwordTextFieldHeightAnchor: NSLayoutConstraint?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // screen background color
+        view.backgroundColor = UIColor(r: 10, g: 50, b: 160)
+        
+        view.addSubview(inputsContainerView)
+        view.addSubview(messageText)
+        view.addSubview(loginRegisterButton)
+        view.addSubview(profileImageView)
+        view.addSubview(loginRegisterSegmentedControl)
+        
+        setupInputsContainerView()
+        setupMessageText()
+        setupLoginRegisterButton()
+        setupProfileImageView()
+        setupLoginRegisterSegmentedControl()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
     
     let inputsContainerView: UIView = {
         let view = UIView()
@@ -22,10 +54,83 @@ class LoginController: UIViewController {
         return view
     }()
     
+    let messageText: UILabel = {
+        let tf = UILabel()
+        tf.text = "Sign in to GameSpeak"
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.numberOfLines = 4
+        tf.textAlignment = .center
+        tf.textColor = UIColor(r: 255, g: 255, b: 255)
+        //tf.font = UIFont.boldSystemFont(ofSize: 50)
+        tf.font = UIFont(name: "MarkerFelt-Thin", size: 25)
+        return tf
+    }()
+    
+    lazy var profileImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "controller_splash")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 20
+        
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSelectProfileImageView)))
+        imageView.isUserInteractionEnabled = true
+        
+        return imageView
+    }()
+    
+    lazy var loginRegisterSegmentedControl: UISegmentedControl = {
+        let sc = UISegmentedControl(items: ["Sign In", "Sign Up"])
+        sc.translatesAutoresizingMaskIntoConstraints = false
+        sc.tintColor = UIColor(r: 255, g: 255, b: 255)
+        sc.selectedSegmentIndex = 1
+        sc.addTarget(self, action: #selector(handleLoginRegisterChange), for: .valueChanged)
+        return sc
+    }()
+    
+    let nameTextField: UITextField = {
+        let tf = UITextField()
+        tf.placeholder = "Name"
+        tf.textColor = UIColor(r: 0, g: 0, b: 0)
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        return tf
+    }()
+    
+    let nameSeparatorView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(r: 220, g: 220, b: 220)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    let emailTextField: UITextField = {
+        let tf = UITextField()
+        tf.placeholder = "Email"
+        tf.textColor = UIColor(r: 0, g: 0, b: 0)
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        return tf
+    }()
+    
+    let emailSeparatorView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(r: 220, g: 220, b: 220)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    let passwordTextField: UITextField = {
+        let tf = UITextField()
+        tf.placeholder = "Password"
+        tf.textColor = UIColor(r: 0, g: 0, b: 0)
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.isSecureTextEntry = true
+        return tf
+    }()
+    
     lazy var loginRegisterButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor(r: 0, g: 100, b: 200)
-        button.setTitle("Register", for: UIControl.State())
+        button.setTitle("Sign up", for: UIControl.State())
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.white, for: UIControl.State())
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
@@ -67,67 +172,10 @@ class LoginController: UIViewController {
     }
     
     func invalidLogin() {
-        let alert = UIAlertController(title: "Alert!", message: "Login is invalid", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Alert!", message: "Sign in is invalid", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-    
-    let nameTextField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Name"
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        return tf
-    }()
-    
-    let nameSeparatorView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(r: 220, g: 220, b: 220)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    let emailTextField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Email"
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        return tf
-    }()
-    
-    let emailSeparatorView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(r: 220, g: 220, b: 220)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    let passwordTextField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Password"
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.isSecureTextEntry = true
-        return tf
-    }()
-    
-    lazy var profileImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "ps_splash")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
-        
-        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSelectProfileImageView)))
-        imageView.isUserInteractionEnabled = true
-        
-        return imageView
-    }()
-    
-    lazy var loginRegisterSegmentedControl: UISegmentedControl = {
-        let sc = UISegmentedControl(items: ["Login", "Register"])
-        sc.translatesAutoresizingMaskIntoConstraints = false
-        sc.tintColor = UIColor(r: 255, g: 255, b: 255)
-        sc.selectedSegmentIndex = 1
-        sc.addTarget(self, action: #selector(handleLoginRegisterChange), for: .valueChanged)
-        return sc
-    }()
     
     @objc func handleLoginRegisterChange() {
         let title = loginRegisterSegmentedControl.titleForSegment(at: loginRegisterSegmentedControl.selectedSegmentIndex)
@@ -151,34 +199,12 @@ class LoginController: UIViewController {
         passwordTextFieldHeightAnchor?.isActive = true
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // screen background color
-        view.backgroundColor = UIColor(r: 10, g: 50, b: 160)
-        
-        view.addSubview(inputsContainerView)
-        view.addSubview(loginRegisterButton)
-        view.addSubview(profileImageView)
-        view.addSubview(loginRegisterSegmentedControl)
-        
-        setupInputsContainerView()
-        setupLoginRegisterButton()
-        setupProfileImageView()
-        setupLoginRegisterSegmentedControl()
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-        super.touchesBegan(touches, with: event)
-    }
-    
-    func setupLoginRegisterSegmentedControl() {
+    func setupMessageText() {
         //need x, y, width, height constraints
-        loginRegisterSegmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        loginRegisterSegmentedControl.bottomAnchor.constraint(equalTo: inputsContainerView.topAnchor, constant: -12).isActive = true
-        loginRegisterSegmentedControl.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor, multiplier: 1).isActive = true
-        loginRegisterSegmentedControl.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        messageText.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        messageText.topAnchor.constraint(equalTo: view.centerYAnchor, constant: -375).isActive = true
+        messageText.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -40).isActive = true
+        messageText.heightAnchor.constraint(equalToConstant: 100).isActive = true
     }
     
     func setupProfileImageView() {
@@ -189,10 +215,13 @@ class LoginController: UIViewController {
         profileImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
     }
     
-    var inputsContainerViewHeightAnchor: NSLayoutConstraint?
-    var nameTextFieldHeightAnchor: NSLayoutConstraint?
-    var emailTextFieldHeightAnchor: NSLayoutConstraint?
-    var passwordTextFieldHeightAnchor: NSLayoutConstraint?
+    func setupLoginRegisterSegmentedControl() {
+        //need x, y, width, height constraints
+        loginRegisterSegmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        loginRegisterSegmentedControl.bottomAnchor.constraint(equalTo: inputsContainerView.topAnchor, constant: -12).isActive = true
+        loginRegisterSegmentedControl.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor, multiplier: 1).isActive = true
+        loginRegisterSegmentedControl.heightAnchor.constraint(equalToConstant: 36).isActive = true
+    }
     
     func setupInputsContainerView() {
         //need x, y, width, height constraints
@@ -257,39 +286,5 @@ class LoginController: UIViewController {
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
-    }
-}
-
-extension UIColor {
-    
-    convenience init(r: CGFloat, g: CGFloat, b: CGFloat) {
-        self.init(red: r/255, green: g/255, blue: b/255, alpha: 1)
-    }
-    
-}
-
-var vSpinner : UIView?
-
-extension UIViewController {
-    func showSpinner(onView : UIView) {
-        let spinnerView = UIView.init(frame: onView.bounds)
-        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-        let ai = UIActivityIndicatorView.init(style: .whiteLarge)
-        ai.startAnimating()
-        ai.center = spinnerView.center
-        
-        DispatchQueue.main.async {
-            spinnerView.addSubview(ai)
-            onView.addSubview(spinnerView)
-        }
-        
-        vSpinner = spinnerView
-    }
-    
-    func removeSpinner() {
-        DispatchQueue.main.async {
-            vSpinner?.removeFromSuperview()
-            vSpinner = nil
-        }
     }
 }
