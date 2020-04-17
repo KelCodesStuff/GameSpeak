@@ -42,9 +42,9 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
                 self.messages.append(Message(dictionary: dictionary))
                 DispatchQueue.main.async(execute: {
                     self.collectionView?.reloadData()
-                    //scroll to the last index
-                    //                    let indexPath = IndexPath(item: self.messages.count - 1, section: 0)
-                    //                    self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: true)
+                    // scroll to the last index
+                    // let indexPath = IndexPath(item: self.messages.count - 1, section: 0)
+                    // self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: true)
                 })
                 
             }, withCancel: nil)
@@ -58,7 +58,8 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         super.viewDidLoad()
         
         collectionView?.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
-        //        collectionView?.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
+        
+        // collectionView?.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
         collectionView?.alwaysBounceVertical = true
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(ChatMessageCell.self, forCellWithReuseIdentifier: cellId)
@@ -85,14 +86,17 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         // Local variable inserted by Swift 4.2 migrator.
         let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
         
         
         if let videoUrl = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.mediaURL)] as? URL {
+            
             //we selected a video
             handleVideoSelectedForUrl(videoUrl)
         } else {
+            
             //we selected an image
             handleImageSelectedForInfo(info as [String : AnyObject])
         }
@@ -214,16 +218,12 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     
     func setupKeyboardObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardDidShow), name: UIResponder.keyboardDidShowNotification, object: nil)
-        
-        //        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(handleKeyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
-        //
-        //        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(handleKeyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
     }
     
     @objc func handleKeyboardDidShow() {
         if messages.count > 0 {
-            //            let indexPath = IndexPath(item: messages.count - 1, section: 0)
-            //            collectionView?.scrollToItem(at: indexPath, at: .top, animated: true)
+            // let indexPath = IndexPath(item: messages.count - 1, section: 0)
+            // collectionView?.scrollToItem(at: indexPath, at: .top, animated: true)
         }
     }
     
@@ -270,11 +270,13 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         setupCell(cell, message: message)
         
         if let text = message.text {
-            //a text message
+            
+            // a text message
             cell.bubbleWidthAnchor?.constant = estimateFrameForText(text).width + 32
             cell.textView.isHidden = false
         } else if message.imageUrl != nil {
-            //fall in here if its an image message
+            
+            // fall in here if its an image message
             cell.bubbleWidthAnchor?.constant = 200
             cell.textView.isHidden = true
         }
@@ -399,7 +401,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     var startingFrame: CGRect?
     var blackBackgroundView: UIView?
     var startingImageView: UIImageView?
-    
+/*
     //my custom zooming logic
     func performZoomInForStartingImageView(_ startingImageView: UIImageView) {
         
@@ -414,7 +416,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         zoomingImageView.isUserInteractionEnabled = true
         zoomingImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleZoomOut)))
         
-        if let keyWindow = UIApplication.shared.keyWindow {
+        if let keyWindow = UIApplication.shared.connectedScenes {
             blackBackgroundView = UIView(frame: keyWindow.frame)
             blackBackgroundView?.backgroundColor = UIColor.black
             blackBackgroundView?.alpha = 0
@@ -440,9 +442,11 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
                 //                    do nothing
             })
             
+            keyWindow?.endEditing(true)
+            
         }
     }
-    
+    */
     @objc func handleZoomOut(_ tapGesture: UITapGestureRecognizer) {
         if let zoomOutImageView = tapGesture.view {
             //need to animate back out to controller
@@ -462,19 +466,6 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Helper function inserted by Swift 4.2 migrator.
 fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
