@@ -43,6 +43,7 @@ class MessagesController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
         
@@ -187,10 +188,15 @@ class MessagesController: UITableViewController {
         } catch let logoutError {
             print(logoutError)
         }
+    
         
         let loginController = LoginController()
         loginController.messagesController = self
-        present(loginController, animated: true, completion: nil)
+        
+        let navigationController = UINavigationController(rootViewController: loginController)
+        navigationController.modalPresentationStyle = .overFullScreen
+        navigationController.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.present(navigationController, animated: true, completion: nil)
     }
     
     @objc func handleNewMessage() {
