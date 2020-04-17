@@ -43,7 +43,7 @@ class MessagesController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        overrideUserInterfaceStyle = .light
+        overrideUserInterfaceStyle = .light // override view controller to light mode
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
         
@@ -78,11 +78,6 @@ class MessagesController: UITableViewController {
                 
                 self.messagesDictionary.removeValue(forKey: chatPartnerId)
                 self.attemptReloadOfTable()
-                
-                //                //this is one way of updating the table, but its actually not that safe..
-                //                self.messages.removeAtIndex(indexPath.row)
-                //                self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-                
             })
         }
     }
