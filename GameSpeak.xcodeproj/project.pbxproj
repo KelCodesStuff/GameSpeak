@@ -307,7 +307,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = KReid;
+				ORGANIZATIONNAME = "Studio757 LLc";
 				TargetAttributes = {
 					0C8AB38C21F835A200352B82 = {
 						CreatedOnToolsVersion = 10.1;
@@ -693,7 +693,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kreid.GameSpeak;
+				PRODUCT_BUNDLE_IDENTIFIER = com.studio757.GameSpeak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "GameSpeak Development";
 				SWIFT_VERSION = 5.0;
@@ -716,7 +716,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kreid.GameSpeak;
+				PRODUCT_BUNDLE_IDENTIFIER = com.studio757.GameSpeak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "GameSpeak Development";
 				SWIFT_VERSION = 5.0;
