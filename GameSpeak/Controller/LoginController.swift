@@ -22,7 +22,7 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        overrideUserInterfaceStyle = .light
+        overrideUserInterfaceStyle = .light // override view controller to light mode
         
         // screen background color
         view.backgroundColor = UIColor(r: 10, g: 50, b: 160)
