@@ -107,11 +107,12 @@ class ChatMessageCell: UICollectionViewCell {
         if message?.videoUrl != nil {
             return
         }
-        
+/*
         if let imageView = tapGesture.view as? UIImageView {
             //PRO Tip: don't perform a lot of custom logic inside of a view class
             self.chatLogController?.performZoomInForStartingImageView(imageView)
         }
+ */
     }
     
     var bubbleWidthAnchor: NSLayoutConstraint?
