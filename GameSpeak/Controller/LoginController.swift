@@ -14,7 +14,6 @@ class LoginController: UIViewController {
     
     var loginController: LoginController?
     var messagesController: MessagesController?
-    //    var settingsController: SettingsController?
     
     var inputsContainerViewHeightAnchor: NSLayoutConstraint?
     var nameTextFieldHeightAnchor: NSLayoutConstraint?
@@ -23,6 +22,7 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         
         // screen background color
         view.backgroundColor = UIColor(r: 10, g: 50, b: 160)
@@ -61,7 +61,6 @@ class LoginController: UIViewController {
         tf.numberOfLines = 4
         tf.textAlignment = .center
         tf.textColor = UIColor(r: 255, g: 255, b: 255)
-        //tf.font = UIFont.boldSystemFont(ofSize: 50)
         tf.font = UIFont(name: "MarkerFelt-Thin", size: 25)
         return tf
     }()
