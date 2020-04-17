@@ -33,7 +33,7 @@ extension LoginController: UIImagePickerControllerDelegate, UINavigationControll
                     return
             }
             
-            //successfully authenticated user
+            // successfully authenticated user
             let imageName = UUID().uuidString
             let storageRef = Storage.storage().reference().child("profile_images").child("\(imageName).jpg")
             
