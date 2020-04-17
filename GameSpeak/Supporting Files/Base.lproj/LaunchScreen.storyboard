@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +14,40 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="controller_1" translatesAutoresizingMaskIntoConstraints="NO" id="G9I-br-hhM">
+                                <rect key="frame" x="80" y="92" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="QAD-L8-feU"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="controller_2" translatesAutoresizingMaskIntoConstraints="NO" id="NXJ-3f-mfn">
+                                <rect key="frame" x="87" y="615" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="g4t-bl-vZI"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="controller_splash" translatesAutoresizingMaskIntoConstraints="NO" id="EaU-Ev-KXG">
+                                <rect key="frame" x="87" y="349" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="8XH-VJ-d2v"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.039215686274509803" green="0.19607843137254902" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NXJ-3f-mfn" secondAttribute="bottom" constant="119" id="0PP-Is-2zp"/>
+                            <constraint firstItem="EaU-Ev-KXG" firstAttribute="trailing" secondItem="NXJ-3f-mfn" secondAttribute="trailing" id="0cF-e3-2X3"/>
+                            <constraint firstItem="EaU-Ev-KXG" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="349" id="2JX-YH-5kv"/>
+                            <constraint firstItem="G9I-br-hhM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="374-J4-AWT"/>
+                            <constraint firstItem="EaU-Ev-KXG" firstAttribute="leading" secondItem="NXJ-3f-mfn" secondAttribute="leading" id="7xJ-wc-zTO"/>
+                            <constraint firstItem="EaU-Ev-KXG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HWD-if-YjP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G9I-br-hhM" secondAttribute="trailing" constant="94" id="cNC-n1-fsx"/>
+                            <constraint firstItem="EaU-Ev-KXG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="kLB-cH-6HL"/>
+                            <constraint firstItem="G9I-br-hhM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="ouQ-iZ-1k4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +56,9 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="controller_1" width="512" height="512"/>
+        <image name="controller_2" width="512" height="512"/>
+        <image name="controller_splash" width="1024" height="1024"/>
+    </resources>
 </document>

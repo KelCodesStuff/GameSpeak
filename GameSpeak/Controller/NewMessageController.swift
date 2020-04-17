@@ -17,6 +17,7 @@ class NewMessageController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light // override view controller to light mode
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(handleCancel))
         
@@ -37,10 +38,7 @@ class NewMessageController: UITableViewController {
                 DispatchQueue.main.async(execute: {
                     self.tableView.reloadData()
                 })
-                
-                //                user.name = dictionary["name"]
             }
-            
         }, withCancel: nil)
     }
     
