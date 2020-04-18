@@ -6,8 +6,6 @@
 
 <img src="https://img.shields.io/badge/Platforms-iOS-brightgreen.svg?style=flat" alt="Mac + Linux" />
 
-[![coverage report](https://gitlab.com/KelCodesStuff/GameSpeak/badges/master/coverage.svg)](https://gitlab.com/KelCodesStuff/GameSpeak/commits/master)
-
 GameSpeak is an ios messaging app for gamers!
 
 ### Current Status and Project Goals
